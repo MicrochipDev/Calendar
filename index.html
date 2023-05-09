@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="icon" type="image" href="./images/pageIcon.png">
+    <title>Calender</title>
+</head>
+<body>
+    <div id = "container">
+        <h1 id ="content">Armenian Genocide 1915</h1>
+        <div id = "calender">
+            <div>
+                <!-- .... Month .... -->
+                <select id="0" class="month" onchange="selectMonth()">
+                    <option id="1" value="Jan">January</option>
+                    <option id="2" value="Feb">February</option>
+                    <option id="3" value="Mar">March</option>
+                    <option id="4" value="Apr">April</option>
+                    <option id="5" value="May">May</option>
+                    <option id="6" value="Jun">June</option>
+                    <option id="7" value="Jul">July</option>
+                    <option id="8" value="Aug">August</option>
+                    <option id="9" value="Sep">September</option>
+                    <option id="10" value="Oct">October</option>
+                    <option id="11" value="Nov">November</option>
+                    <option id="12" value="Dec">December</option>
+                </select>
+                <!-- .... Weekday .... -->
+                <input type="text" class="weekDay" readonly>
+                <!-- .... Year .... -->
+                <button id="yPrev" onclick="prevY()"><</button>
+                <input type="text" id="year" class="year" readonly>
+                <button id="yNext" onclick="nextY()">></button>
+                <!-- .... GOTO Today Button .... -->
+                <button class="btnToday" onclick="gotoDate()">TODAY</button>
+            </div>
+            <div class="clock">
+                <h2 id="time"></h2>
+            </div>
+            <div class="Days">
+                <!-- .... Days .... -->
+                <ul class="daysList">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
