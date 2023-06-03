@@ -5,8 +5,8 @@ let _month = _Date.getMonth();
 let _weekday = _Date.getDay();
 let _year = _Date.getFullYear();
 
-monthArray = ["January", "February", "March", "April", "May", "June", "July",
-            "August", "September", "October", "November", "December"];
+monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct", "Nov", "Dec"];
 weekArray = ["Sunday", "Monday", "Tuesday", "Wedenesday", "Thursday", "Friday", "Saturday"];            
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -46,17 +46,14 @@ function gotoDate(){
      else{
         document.querySelector(".weekDay").style.color="white";
      }
-
     MyF_month(_month);
 
     if (_month == 3 && datex == 24){
         bgImage.style.backgroundImage = "url(./images/April.jpg)";
         document.getElementById("content").style.visibility="visible";
     }
-    else {
-        let selection = document.getElementById("0").value;
+    else{
         document.getElementById("content").style.visibility="hidden";
-        MyF_month(selection);
     }
     if (_year == 1915){
         document.getElementById("year").style.color="red"
@@ -231,16 +228,13 @@ function MyF_month(selection){
             bgImage.style.backgroundImage = "url(./images/winter.jpg)";
             break;  
         default:
-            alert("Error, image not found!!!");
-            break;    
+            alert("Error, image not found!!!");   
     }
     if (_month == 3 && datex == 24){
         bgImage.style.backgroundImage = "url(./images/April.jpg)";
         document.getElementById("content").style.visibility="visible";
     }
-    else {
-        let selection = document.getElementById("0").value;
+    else{
         document.getElementById("content").style.visibility="hidden";
-        MyF_month(selection);
     }
 }
